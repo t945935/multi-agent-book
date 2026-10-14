@@ -3,7 +3,7 @@
   "subtitle": "用 AI Agent 團隊完成寫作、測試、排版與發布",
   "author": "Happy eBook Authors",
   "version": "1.0.0",
-  "created_at": "2026-10-14T04:50:19.846079+00:00",
+  "created_at": "2026-10-14T04:59:32.591155+00:00",
   "artifacts": {
     "CHANGELOG.md": {
       "path": "CHANGELOG.md",
@@ -52,13 +52,13 @@
     },
     "dist/book_interior.pdf": {
       "path": "dist/book_interior.pdf",
-      "size_bytes": 495895,
-      "sha256": "48663552978a0939dbf553e4e0f083eb656b3af7824aa76dc7aa27e7c472f742"
+      "size_bytes": 497618,
+      "sha256": "e684a8ac09f02237a19f736afdfe6a63f83ec69d0a69e8da7414d724b8973280"
     },
     "dist/cover.pdf": {
       "path": "dist/cover.pdf",
       "size_bytes": 15957,
-      "sha256": "11a68baca35781be9c77508546f49ca15050917a23dc15fe0875a83299f707e5"
+      "sha256": "760f50b3ae94a153db11ac7a6243ecb3cb9a8bbd5824ac1400b91aea2f469396"
     },
     "dist/cover_1600x2400.jpg": {
       "path": "dist/cover_1600x2400.jpg",
@@ -67,8 +67,8 @@
     },
     "dist/multi-agent-book-v1.0.0.epub": {
       "path": "dist/multi-agent-book-v1.0.0.epub",
-      "size_bytes": 1596564,
-      "sha256": "13aadaf32cc3ae383c2b3f239e9489dc994a931b7fe777f58e8694d0feca52df"
+      "size_bytes": 1596950,
+      "sha256": "799bd950b473b658ccde57c1bd48c4129f3ff5310b9b72f4a22d12c2e5ba5c06"
     },
     "docs/chapter_specs/ch01_spec.md": {
       "path": "docs/chapter_specs/ch01_spec.md",
@@ -472,8 +472,8 @@
     },
     "src/preface.md": {
       "path": "src/preface.md",
-      "size_bytes": 5710,
-      "sha256": "e476615ea302c0059685e6aa828200db48ed072d7a2d153a59512af298ea91aa"
+      "size_bytes": 6705,
+      "sha256": "b10c04f7213be14bc203a2d4d272614c08f32f1444a51b2b2d6ff49e01a4e8f6"
     },
     "templates/book.typ": {
       "path": "templates/book.typ",
