@@ -1,0 +1,501 @@
+{
+  "title": "多 Agent 系統架構與實戰",
+  "subtitle": "用 AI Agent 團隊完成寫作、測試、排版與發布",
+  "author": "Happy eBook Authors",
+  "version": "1.0.0",
+  "created_at": "2026-10-14T04:50:19.846079+00:00",
+  "artifacts": {
+    "CHANGELOG.md": {
+      "path": "CHANGELOG.md",
+      "size_bytes": 786,
+      "sha256": "6a3ca74585c0742b587cb4d3fed463d85e4f2c951001217a0e7e2040ac2fed0b"
+    },
+    "LICENSE": {
+      "path": "LICENSE",
+      "size_bytes": 1947,
+      "sha256": "cb61c27fa35c1ee1fa8b3534b54e6d3ecbcc7bb41ad8bb205159e8f80fd35cb3"
+    },
+    "README.md": {
+      "path": "README.md",
+      "size_bytes": 4798,
+      "sha256": "1851db39c0a302c811712c88a255590f19a63e1851ae82908e55451391743fd1"
+    },
+    "assets/covers/background_art.jpg": {
+      "path": "assets/covers/background_art.jpg",
+      "size_bytes": 985648,
+      "sha256": "09678ac1ec996ccf491c3097d2e279c96d5e8e517690c0b83a626306ba336b44"
+    },
+    "assets/covers/cover_1600x2400.png": {
+      "path": "assets/covers/cover_1600x2400.png",
+      "size_bytes": 4676741,
+      "sha256": "449e7e980f620f8d061b5ff77127322c7185342afa3949a0b27d91002e2b8512"
+    },
+    "bin/LICENSE": {
+      "path": "bin/LICENSE",
+      "size_bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "bin/NOTICE": {
+      "path": "bin/NOTICE",
+      "size_bytes": 3765,
+      "sha256": "c7d2272e134313f6fe5de032243dd06b2e33b66a9110f7e3c25c9badd8c516ac"
+    },
+    "bin/README.md": {
+      "path": "bin/README.md",
+      "size_bytes": 10537,
+      "sha256": "56678560734e7f7501a2784c55b4d2f7ac7a8fb1004a3db93b7cea4517ea1f32"
+    },
+    "bin/typst": {
+      "path": "bin/typst",
+      "size_bytes": 39744608,
+      "sha256": "71013695dfcfef0a92c7df42f63fdea3e8f12fd72220a55a03c9a6729b322b78"
+    },
+    "dist/book_interior.pdf": {
+      "path": "dist/book_interior.pdf",
+      "size_bytes": 495895,
+      "sha256": "48663552978a0939dbf553e4e0f083eb656b3af7824aa76dc7aa27e7c472f742"
+    },
+    "dist/cover.pdf": {
+      "path": "dist/cover.pdf",
+      "size_bytes": 15957,
+      "sha256": "11a68baca35781be9c77508546f49ca15050917a23dc15fe0875a83299f707e5"
+    },
+    "dist/cover_1600x2400.jpg": {
+      "path": "dist/cover_1600x2400.jpg",
+      "size_bytes": 1278505,
+      "sha256": "e0583d2109a335f59066a22f43ccb609543014fc9d1381304a52de79ce40aa2c"
+    },
+    "dist/multi-agent-book-v1.0.0.epub": {
+      "path": "dist/multi-agent-book-v1.0.0.epub",
+      "size_bytes": 1596564,
+      "sha256": "13aadaf32cc3ae383c2b3f239e9489dc994a931b7fe777f58e8694d0feca52df"
+    },
+    "docs/chapter_specs/ch01_spec.md": {
+      "path": "docs/chapter_specs/ch01_spec.md",
+      "size_bytes": 2380,
+      "sha256": "5136fa95e621da7a1efee6802fe5597fa13a0265a418f92204526140819e9c3e"
+    },
+    "docs/chapter_specs/ch02_spec.md": {
+      "path": "docs/chapter_specs/ch02_spec.md",
+      "size_bytes": 1215,
+      "sha256": "a2ef80efa831b8a393d3e5a5686962fbf5d9669c81ef0836901f8aa6cd014b38"
+    },
+    "docs/chapter_specs/ch03_spec.md": {
+      "path": "docs/chapter_specs/ch03_spec.md",
+      "size_bytes": 1213,
+      "sha256": "5128da6aea01020010be3f45c618bd5753f80f3690f36430198409eb5dd20f20"
+    },
+    "docs/chapter_specs/ch04_spec.md": {
+      "path": "docs/chapter_specs/ch04_spec.md",
+      "size_bytes": 1207,
+      "sha256": "e3c92e36cfdfd4e5cec6c16582389e45714a8ebd9cf9a3d4d40f183d3f0144cf"
+    },
+    "docs/chapter_specs/ch05_spec.md": {
+      "path": "docs/chapter_specs/ch05_spec.md",
+      "size_bytes": 1210,
+      "sha256": "ee32fc1d7779894aebd5c1d9c471f3620b5c8d76e7832b01a7df343538cb4e2c"
+    },
+    "docs/chapter_specs/ch06_spec.md": {
+      "path": "docs/chapter_specs/ch06_spec.md",
+      "size_bytes": 1206,
+      "sha256": "acc5adecff3033084e82b17028b2422a0fe440a994abe9b280c342823de1dd64"
+    },
+    "docs/chapter_specs/ch07_spec.md": {
+      "path": "docs/chapter_specs/ch07_spec.md",
+      "size_bytes": 1206,
+      "sha256": "cacf6ff34ad738ae595ba2159d442b5af18eb746e7cac35178c082dc05f6f5e4"
+    },
+    "docs/chapter_specs/ch08_spec.md": {
+      "path": "docs/chapter_specs/ch08_spec.md",
+      "size_bytes": 1183,
+      "sha256": "1587837a0dbe581005184479d6ffe7d0981059bcf2f62471c4d3db75ff87dc87"
+    },
+    "docs/google_play_books_checklist.md": {
+      "path": "docs/google_play_books_checklist.md",
+      "size_bytes": 2453,
+      "sha256": "bc96571a51b9fb5241e1f8eaf2d6e3e285eb43b2c260a7eaacf93ff6d748220d"
+    },
+    "docs/google_play_books_metadata.md": {
+      "path": "docs/google_play_books_metadata.md",
+      "size_bytes": 3859,
+      "sha256": "0b2506d8990b42626615cd690c6f9dbe1d81bc66aaf728250f46fdc07beb29eb"
+    },
+    "docs/prd.md": {
+      "path": "docs/prd.md",
+      "size_bytes": 3274,
+      "sha256": "9727fefdf91311be09e4675801df044b60609ed701bc3ae1979e2dad5b93f4fc"
+    },
+    "docs/release_checklist.md": {
+      "path": "docs/release_checklist.md",
+      "size_bytes": 2313,
+      "sha256": "aefcca4223159efc00011c5d25256dd72935180ed521b48610973e7bf78bbc21"
+    },
+    "docs/store_listing.md": {
+      "path": "docs/store_listing.md",
+      "size_bytes": 3178,
+      "sha256": "43579e8dd7b13503daa3d4e1a248a7e0bab9ec4abb39c9310e7f64811dd10765"
+    },
+    "docs/style_guide.md": {
+      "path": "docs/style_guide.md",
+      "size_bytes": 3299,
+      "sha256": "74afd9f69d2ffd8182e8e97da66a18ba471f53b2ee60dd931fc79fec043ffb18"
+    },
+    "examples/ch01_multi_agent_baseline/.pytest_cache/README.md": {
+      "path": "examples/ch01_multi_agent_baseline/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch01_multi_agent_baseline/README.md": {
+      "path": "examples/ch01_multi_agent_baseline/README.md",
+      "size_bytes": 1356,
+      "sha256": "537ae1ff5e472ccc1689f6c5d4de97a277ef18daed62b522011aa4f479fbdb88"
+    },
+    "examples/ch01_multi_agent_baseline/agent_bus.py": {
+      "path": "examples/ch01_multi_agent_baseline/agent_bus.py",
+      "size_bytes": 2321,
+      "sha256": "bd4add3742b0bf8a7d8fdef27fc93da1e7298a75b9654d574f73cc790a8b5604"
+    },
+    "examples/ch01_multi_agent_baseline/agents.py": {
+      "path": "examples/ch01_multi_agent_baseline/agents.py",
+      "size_bytes": 3912,
+      "sha256": "b553ddb2da2a291f903afd1f6b003176cc486261efb70d2a8ab7c741dc6a004e"
+    },
+    "examples/ch01_multi_agent_baseline/main.py": {
+      "path": "examples/ch01_multi_agent_baseline/main.py",
+      "size_bytes": 1684,
+      "sha256": "4cf3f0e21bf704b1430bd68ead7dea05098b30c4c4bf8026636ff279b17f1964"
+    },
+    "examples/ch01_multi_agent_baseline/pyproject.toml": {
+      "path": "examples/ch01_multi_agent_baseline/pyproject.toml",
+      "size_bytes": 227,
+      "sha256": "7fbc1f51f69bd4b154cfdd2fa5ff5c924df5638ddfaa19060f5d00c589b1a6ce"
+    },
+    "examples/ch01_multi_agent_baseline/test_baseline.py": {
+      "path": "examples/ch01_multi_agent_baseline/test_baseline.py",
+      "size_bytes": 2587,
+      "sha256": "9cdf71c9373c4a3dc6a639a4986c4f4f645c865fae68813a5fbb05fe341fd4fe"
+    },
+    "examples/ch02_herdr_orchestration/.pytest_cache/README.md": {
+      "path": "examples/ch02_herdr_orchestration/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch02_herdr_orchestration/README.md": {
+      "path": "examples/ch02_herdr_orchestration/README.md",
+      "size_bytes": 1294,
+      "sha256": "74207e8f59744e8e2a4c88e89a9bfb30f9a9423927abb2429557bce68532d138"
+    },
+    "examples/ch02_herdr_orchestration/herdr.py": {
+      "path": "examples/ch02_herdr_orchestration/herdr.py",
+      "size_bytes": 1420,
+      "sha256": "f4506da4ed8cb06b341937da1840e986dac84effdad43c3ae8c90ee2a9c56912"
+    },
+    "examples/ch02_herdr_orchestration/pyproject.toml": {
+      "path": "examples/ch02_herdr_orchestration/pyproject.toml",
+      "size_bytes": 226,
+      "sha256": "d587710056934a1cb4cff7cdd3529bb38d0fb1c894617622f9b29980a1d2f73b"
+    },
+    "examples/ch02_herdr_orchestration/test_baseline.py": {
+      "path": "examples/ch02_herdr_orchestration/test_baseline.py",
+      "size_bytes": 635,
+      "sha256": "db843639dc3f1c9958ee2841a3fa9370cbc94a1f954537a74aa92e48d02f1027"
+    },
+    "examples/ch03_pi_agent_extension/.pytest_cache/README.md": {
+      "path": "examples/ch03_pi_agent_extension/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch03_pi_agent_extension/README.md": {
+      "path": "examples/ch03_pi_agent_extension/README.md",
+      "size_bytes": 1333,
+      "sha256": "99af96beeb05a85109cfb452bfe92ab0ca609328f3a749d748ba85af0b3d6b0d"
+    },
+    "examples/ch03_pi_agent_extension/micro_patch.py": {
+      "path": "examples/ch03_pi_agent_extension/micro_patch.py",
+      "size_bytes": 568,
+      "sha256": "abfc99f0395e85b31f94d0e0e902340a6eea6f89d3e80a9b5d1bf9c98bee040a"
+    },
+    "examples/ch03_pi_agent_extension/pyproject.toml": {
+      "path": "examples/ch03_pi_agent_extension/pyproject.toml",
+      "size_bytes": 225,
+      "sha256": "e09952bb65b061068caac32a43f59e4b17af84787c1a3a6f3e45c82f1ddb8457"
+    },
+    "examples/ch03_pi_agent_extension/test_baseline.py": {
+      "path": "examples/ch03_pi_agent_extension/test_baseline.py",
+      "size_bytes": 488,
+      "sha256": "b9338d82f8c32f0ed13676ed0fcf400d3e8a82e5add2559c0911b5c3f26b05ef"
+    },
+    "examples/ch04_opencode_workflow/.pytest_cache/README.md": {
+      "path": "examples/ch04_opencode_workflow/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch04_opencode_workflow/README.md": {
+      "path": "examples/ch04_opencode_workflow/README.md",
+      "size_bytes": 1310,
+      "sha256": "4dda984a954b3a94d73e2060f363256e1610dce033fd4ce76faa370a42a48396"
+    },
+    "examples/ch04_opencode_workflow/pyproject.toml": {
+      "path": "examples/ch04_opencode_workflow/pyproject.toml",
+      "size_bytes": 224,
+      "sha256": "cdef5ba340a7ec4e277330d7eba64e5e8ce56172955370c94ef0aeb94739ffb6"
+    },
+    "examples/ch04_opencode_workflow/test_baseline.py": {
+      "path": "examples/ch04_opencode_workflow/test_baseline.py",
+      "size_bytes": 374,
+      "sha256": "ed51c84831a0a4b2f5553a89e277d286430c98cbcca3b4230a3d5dceeca606a6"
+    },
+    "examples/ch04_opencode_workflow/workflow.py": {
+      "path": "examples/ch04_opencode_workflow/workflow.py",
+      "size_bytes": 689,
+      "sha256": "9fd357c04bb580778b44457e93b793ce11187cf4c24d1264bba5d6878612802a"
+    },
+    "examples/ch05_hermes_self_learning/.pytest_cache/README.md": {
+      "path": "examples/ch05_hermes_self_learning/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch05_hermes_self_learning/README.md": {
+      "path": "examples/ch05_hermes_self_learning/README.md",
+      "size_bytes": 1192,
+      "sha256": "13522e4620fd15a110f1d4a4d0dad012279ad84ba631195814209d2396e924c0"
+    },
+    "examples/ch05_hermes_self_learning/memory.py": {
+      "path": "examples/ch05_hermes_self_learning/memory.py",
+      "size_bytes": 814,
+      "sha256": "ce1d41c5e44be950ba6360e6e810a4ad5296ceb8dcd7e776b876ad3c3874708c"
+    },
+    "examples/ch05_hermes_self_learning/pyproject.toml": {
+      "path": "examples/ch05_hermes_self_learning/pyproject.toml",
+      "size_bytes": 227,
+      "sha256": "b5f2f303bec110509677730a35238cc81591d10fca4f214ec9cf24952186ddfc"
+    },
+    "examples/ch05_hermes_self_learning/test_baseline.py": {
+      "path": "examples/ch05_hermes_self_learning/test_baseline.py",
+      "size_bytes": 483,
+      "sha256": "ecc506abe881ae5e2fef1f73d6ebd6d27ec905caae9974d571bdfed3638ab8aa"
+    },
+    "examples/ch06_sandbox_runner/.pytest_cache/README.md": {
+      "path": "examples/ch06_sandbox_runner/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch06_sandbox_runner/README.md": {
+      "path": "examples/ch06_sandbox_runner/README.md",
+      "size_bytes": 1160,
+      "sha256": "4aa5ad42bb6cf1fa5c0ac231fd5c059e4770d367d8276a902ba04bfc2b98cdbd"
+    },
+    "examples/ch06_sandbox_runner/pyproject.toml": {
+      "path": "examples/ch06_sandbox_runner/pyproject.toml",
+      "size_bytes": 221,
+      "sha256": "aaf3fa2f62b70b5c2a3b620d1483b51d150645c23038a54d6ee7faaad83c80cb"
+    },
+    "examples/ch06_sandbox_runner/sandbox.py": {
+      "path": "examples/ch06_sandbox_runner/sandbox.py",
+      "size_bytes": 1160,
+      "sha256": "24cb08a3767e657d89ac41f8a6e04a42bf089fef5ced8d458cb5f82642eb2f4a"
+    },
+    "examples/ch06_sandbox_runner/test_baseline.py": {
+      "path": "examples/ch06_sandbox_runner/test_baseline.py",
+      "size_bytes": 707,
+      "sha256": "11036a73074a5ed6a411f610f556b29fee0c124a7e3fcc019ab9eac9e8e2d1a9"
+    },
+    "examples/ch07_book_pipeline/.pytest_cache/README.md": {
+      "path": "examples/ch07_book_pipeline/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch07_book_pipeline/README.md": {
+      "path": "examples/ch07_book_pipeline/README.md",
+      "size_bytes": 1317,
+      "sha256": "3cf3d8fc2f22524d1ad952158b651ddae75fa77e08068ca1ce77a7d15bb6eac8"
+    },
+    "examples/ch07_book_pipeline/pipeline.py": {
+      "path": "examples/ch07_book_pipeline/pipeline.py",
+      "size_bytes": 766,
+      "sha256": "9a37b8b89e6ea539d4ed71979badaaef1f0510721e77434b68392105473b9bee"
+    },
+    "examples/ch07_book_pipeline/pyproject.toml": {
+      "path": "examples/ch07_book_pipeline/pyproject.toml",
+      "size_bytes": 220,
+      "sha256": "6b21da51bb59e2abe74e869878bf9b0f43121e752e4c57931a5a0b55af065a17"
+    },
+    "examples/ch07_book_pipeline/test_baseline.py": {
+      "path": "examples/ch07_book_pipeline/test_baseline.py",
+      "size_bytes": 508,
+      "sha256": "7929024febb46a5ca1698d9e20610a91e573d7d4bbf8c91d4253f859938377fe"
+    },
+    "examples/ch08_publishing_cicd/.pytest_cache/README.md": {
+      "path": "examples/ch08_publishing_cicd/.pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "examples/ch08_publishing_cicd/README.md": {
+      "path": "examples/ch08_publishing_cicd/README.md",
+      "size_bytes": 1267,
+      "sha256": "32ac1e1909e16ab618ead3aab23f7421e59b90684b14d46d12fd8c08cc2a7f72"
+    },
+    "examples/ch08_publishing_cicd/pyproject.toml": {
+      "path": "examples/ch08_publishing_cicd/pyproject.toml",
+      "size_bytes": 222,
+      "sha256": "e0f0d2c0e27ac29ceb809d2f9ec1aef1b9ba4684a834cd2580cd2c8c66f38e89"
+    },
+    "examples/ch08_publishing_cicd/release.py": {
+      "path": "examples/ch08_publishing_cicd/release.py",
+      "size_bytes": 756,
+      "sha256": "ead57a7bb2a9dee83a289f14759b793bba84a574a00a39ab03ab542d7734d472"
+    },
+    "examples/ch08_publishing_cicd/test_baseline.py": {
+      "path": "examples/ch08_publishing_cicd/test_baseline.py",
+      "size_bytes": 366,
+      "sha256": "c4effe4925324e6bb8fbe1dd102e6515c827aa04c075bc5205e9c9493b937299"
+    },
+    "qa/reports/ch01_review_report.md": {
+      "path": "qa/reports/ch01_review_report.md",
+      "size_bytes": 2301,
+      "sha256": "a68fe524e5bdf3e114a859f743979848e5768addd9776644330b8da30334947e"
+    },
+    "qa/reports/ch02_review_report.md": {
+      "path": "qa/reports/ch02_review_report.md",
+      "size_bytes": 2300,
+      "sha256": "591705acf3466ebbcc84c5358622b86a1227db0697d9cebaef860797eb4f0dcd"
+    },
+    "qa/reports/ch03_review_report.md": {
+      "path": "qa/reports/ch03_review_report.md",
+      "size_bytes": 2279,
+      "sha256": "2d779acbb9d32041e9b09c75902e5453142ff6627a2b4fce170f13f91d131d86"
+    },
+    "qa/reports/ch04_review_report.md": {
+      "path": "qa/reports/ch04_review_report.md",
+      "size_bytes": 2253,
+      "sha256": "08ccae9279e4c879b55827ec0aea21b4b20821cf467e917b7db3eb7da8b95be5"
+    },
+    "qa/reports/ch05_review_report.md": {
+      "path": "qa/reports/ch05_review_report.md",
+      "size_bytes": 2278,
+      "sha256": "43ab0701bf0278b996d64036f764fa6176be48355aaab473d19efef6be9ec9e4"
+    },
+    "qa/reports/ch06_review_report.md": {
+      "path": "qa/reports/ch06_review_report.md",
+      "size_bytes": 2420,
+      "sha256": "9d74cc0e52cf7396a84603241d9f3b717b6ef0ea422df1f262c3d04f8ee5db3f"
+    },
+    "qa/reports/ch07_review_report.md": {
+      "path": "qa/reports/ch07_review_report.md",
+      "size_bytes": 2235,
+      "sha256": "0f6557047b14989fb8243ed86c4c144517bf18175c5d003ea8c0fc6ac4622182"
+    },
+    "qa/reports/ch08_review_report.md": {
+      "path": "qa/reports/ch08_review_report.md",
+      "size_bytes": 2236,
+      "sha256": "fde8ee8de99a0b97c4d6b9b49f63b969ef334173f36e883fdb9c2aa989e21150"
+    },
+    "scripts/build.py": {
+      "path": "scripts/build.py",
+      "size_bytes": 5627,
+      "sha256": "bca2301821da85fa2f194c53c156387dae507454e08aa4a3aa81c976556539c5"
+    },
+    "scripts/build_epub.py": {
+      "path": "scripts/build_epub.py",
+      "size_bytes": 18298,
+      "sha256": "8a2478868e7daeced03de75b1cb1529fba0a527c225259c523f0b7def2b72a94"
+    },
+    "scripts/export_google_play_metadata.py": {
+      "path": "scripts/export_google_play_metadata.py",
+      "size_bytes": 3534,
+      "sha256": "4aa490d293a3ce641a1b76377187ed0eed518290db1ed21ab9cdb9be5b376851"
+    },
+    "scripts/make_cover.py": {
+      "path": "scripts/make_cover.py",
+      "size_bytes": 10214,
+      "sha256": "7cca4cbd287c3be04abbb1ceeff30506adb00331755b0fd4a51a1c30472db173"
+    },
+    "scripts/package_release.py": {
+      "path": "scripts/package_release.py",
+      "size_bytes": 5235,
+      "sha256": "7dca529884bbd65a5bd0896f49bec054cda73928aba21a6438d3eb39368a3d69"
+    },
+    "scripts/test_all.sh": {
+      "path": "scripts/test_all.sh",
+      "size_bytes": 945,
+      "sha256": "9e662e9aea9bf69236df37b0dde7ccfe23d166b3807062c0b69caf1bec4d7496"
+    },
+    "scripts/validate_google_play_package.py": {
+      "path": "scripts/validate_google_play_package.py",
+      "size_bytes": 3641,
+      "sha256": "a4dfaddaf278e86a7d6a57460f4dcdcb01a94ed2efb135c84080a75509d34fb6"
+    },
+    "src/appendix.md": {
+      "path": "src/appendix.md",
+      "size_bytes": 3842,
+      "sha256": "47f5d006e16b36d8b2bf442725bda831fd638cc9d6d67285de0965f5fb22fd4b"
+    },
+    "src/ch01.md": {
+      "path": "src/ch01.md",
+      "size_bytes": 16602,
+      "sha256": "e0523a67bc4de5d33c8e8f1f3e6c0ac70869c755236ff09f2a3169d6d5cd2b17"
+    },
+    "src/ch02.md": {
+      "path": "src/ch02.md",
+      "size_bytes": 17244,
+      "sha256": "171f6dbfeb96d8dcdaa3a310f70daea0c14c0dc87e9473d1fd4692762e1ed13e"
+    },
+    "src/ch03.md": {
+      "path": "src/ch03.md",
+      "size_bytes": 12295,
+      "sha256": "c5177ca1272c76e482d920a2501262c9d45e77cb1202ba0fd3f1af0640c6381f"
+    },
+    "src/ch04.md": {
+      "path": "src/ch04.md",
+      "size_bytes": 11722,
+      "sha256": "384c20210fb9d423ab9dec9fb676b49452d03e76eb335166d4730fbe005af88d"
+    },
+    "src/ch05.md": {
+      "path": "src/ch05.md",
+      "size_bytes": 12450,
+      "sha256": "c5b7261597c998962375482683cf947ddcff49396d17bf8f52848ce6ead6d515"
+    },
+    "src/ch06.md": {
+      "path": "src/ch06.md",
+      "size_bytes": 12214,
+      "sha256": "47123599f5f0fdfdba0663da5174031874c91845ae87a4e4c8fc0246ad02c577"
+    },
+    "src/ch07.md": {
+      "path": "src/ch07.md",
+      "size_bytes": 12411,
+      "sha256": "584e4f37293508c54b75516618b5c6de87779b7f118d878f70f1e53e2fafc6d5"
+    },
+    "src/ch08.md": {
+      "path": "src/ch08.md",
+      "size_bytes": 13742,
+      "sha256": "ac712ce0e026ca3587c5d65c1b7866d842e9a95967b12d3a228227d4a9abf544"
+    },
+    "src/preface.md": {
+      "path": "src/preface.md",
+      "size_bytes": 5710,
+      "sha256": "e476615ea302c0059685e6aa828200db48ed072d7a2d153a59512af298ea91aa"
+    },
+    "templates/book.typ": {
+      "path": "templates/book.typ",
+      "size_bytes": 2305,
+      "sha256": "97ed1826a8bd1717b7a7cd319d209ea9819ff6c527af885b968a845b3af4883b"
+    },
+    "templates/cover.typ": {
+      "path": "templates/cover.typ",
+      "size_bytes": 1080,
+      "sha256": "de2db828962347f45191fb1ac828e52d140085269cc3c13d70a9698b35e6b354"
+    }
+  },
+  "checks": [
+    "tests_passed",
+    "typst_build_passed",
+    "qa_reports_updated",
+    "style_guide_checked",
+    "release_manifest_created",
+    "human_final_approval_required_before_public_upload"
+  ],
+  "notes": [
+    "Release package contains PDF cover, PDF interior, documentation, QA reports, preface, and appendix.",
+    "Public marketplace upload is intentionally not automated and requires human final approval."
+  ]
+}

@@ -1,0 +1,41 @@
+# License
+
+Copyright (c) 2026 Happy eBook Authors.
+
+本專案包含兩類內容：書籍內容與範例程式碼。除非另有書面授權，授權方式如下。
+
+## 書籍內容
+
+`src/`、`docs/`、`qa/`、`templates/` 與出版成品中的文字、圖文設計、排版內容，採用：
+
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+
+你可以在非商業目的下分享本書內容，但必須標示作者 Happy eBook Authors，且不得修改後再散布衍生版本。商業使用、改作、翻譯、重製出版或平台上架需取得作者另行授權。
+
+授權條款摘要請見：
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+## 範例程式碼
+
+`examples/` 與 `scripts/` 中的範例程式碼，採用 MIT License，方便讀者學習、修改與實驗。
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the example code and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## 備註
+
+本授權不涵蓋第三方工具本身，例如 Typst、pytest、Python 或其他外部專案。第三方工具依其各自授權條款使用。

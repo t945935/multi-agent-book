@@ -1,0 +1,10 @@
+[project]
+name = "ch01-multi-agent-baseline"
+version = "0.1.0"
+description = "Companion example for multi-agent book"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["."]

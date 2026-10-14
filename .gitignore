@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Build outputs
+dist/epub_build/
+*.tmp
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets
+.env
+.env.*

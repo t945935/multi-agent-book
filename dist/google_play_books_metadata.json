@@ -1,0 +1,76 @@
+{
+  "title": "多 Agent 系統架構與實戰",
+  "subtitle": "用 AI Agent 團隊完成寫作、測試、排版與發布",
+  "author": "Happy eBook Authors",
+  "language": "zh-TW",
+  "version": "1.0.0",
+  "format": "PDF",
+  "description_short": "一本以真實出版流水線為案例的多 Agent 實戰電子書。從 Herdr 監管中樞、Pi 微修、OpenCode Plan / Build、Hermes 反思審稿、Codex 測試沙盒，到 Typst 排版與 release manifest，帶你把 AI Agent 從單次問答推進到可驗證、可建置、可發布的工程流程。",
+  "description_long": "AI Agent 不應只是更會聊天的工具。當任務變成寫一本書、開發一組範例、執行測試、審稿、排版與上架時，單一 Chatbot 很快會遇到上下文膨脹、角色衝突、驗證不足與修改範圍失控等問題。\n\n《多 Agent 系統架構與實戰》以一個自我指涉的專案為主軸：用多 Agent 團隊製作一本介紹多 Agent 系統的科技書。全書不只談概念，也提供可執行的 Python 範例、pytest 測試、Typst 排版模板、QA 報告與 release 打包流程。\n\n本書適合已經使用過 AI coding 工具，並希望把 AI Agent 用在長程專案、技術寫作、自動化出版或工程流程管理的讀者。",
+  "author_bio": "Happy eBook Authors 是一個專注於 AI 輔助寫作、技術出版自動化與數位學習內容製作的創作團隊。團隊致力於把 AI 工具落地為可驗證、可重跑、可維護的出版流程，涵蓋選題、規格、範例程式碼、審稿、排版、封面與上架素材。",
+  "categories": [
+    "Computers / Artificial Intelligence",
+    "Computers / Software Development & Engineering / General",
+    "Computers / Programming / General",
+    "Computers / Electronic Publishing"
+  ],
+  "keywords": [
+    "AI Agent",
+    "Multi-Agent",
+    "多 Agent",
+    "AI coding",
+    "Herdr",
+    "Pi",
+    "OpenCode",
+    "Hermes",
+    "Codex",
+    "Antigravity",
+    "Typst",
+    "CI/CD",
+    "技術寫作",
+    "自動化出版",
+    "Python",
+    "pytest",
+    "release manifest",
+    "電子書出版"
+  ],
+  "pricing": {
+    "regular": {
+      "TWD": 199,
+      "USD": 5.99,
+      "JPY": 900,
+      "HKD": 48,
+      "SGD": 7.99
+    },
+    "launch_promo": {
+      "TWD": 149,
+      "USD": 4.99,
+      "JPY": 700,
+      "HKD": 38,
+      "SGD": 6.99
+    }
+  },
+  "files": {
+    "interior_pdf": "dist/book_interior.pdf",
+    "cover_pdf": "dist/cover.pdf",
+    "cover_jpg": "dist/cover_1600x2400.jpg",
+    "release_manifest": "dist/release_manifest.json",
+    "release_zip": "dist/multi-agent-book-v1.0.0.zip"
+  },
+  "automation_policy": {
+    "allowed": [
+      "create_draft",
+      "upload_files",
+      "fill_metadata",
+      "save_draft"
+    ],
+    "requires_human_approval": [
+      "publish",
+      "price",
+      "territories",
+      "drm",
+      "isbn",
+      "tax_payment_settings"
+    ]
+  }
+}
